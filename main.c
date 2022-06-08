@@ -4,7 +4,14 @@
 // calculate math
 int doMath(int x, int y/*, int z*/, int g)
 {
-g = x * y;
+g = x / y;
+/*
+
+integer gasPricePerGal(x) pretty self explanatory is
+divided by
+integer fuelEfficiency(y) to calculate price per mile(g)
+
+*/
 
 return g;
 }
@@ -13,10 +20,10 @@ int main()
 	int gasPricePerGal;
 	int tripMiles;
 	int fuelEfficiency;
+	int gasRate;
 	int output1;
 
 	printf("Hello! would you like to calculate gas prices?\nPlease input the following;\nGas Price Per Gal(int)\nTrip Miles(int)\nFuel Efficiency\n");
-
 	printf("Gas Price Per Gal (Please enter a integer): \n");
 	scanf("%d", &gasPricePerGal);
 	printf("You entered... %d", gasPricePerGal);
@@ -25,11 +32,11 @@ int main()
 	scanf("%d", &tripMiles);
 	printf("You entered... %d", tripMiles);
 	printf("\n");
-	printf("Fuel Efficiency (Please enter a integer): \n");
+	printf("Fuel Efficiency/Miles Per Gal(Please enter a integer): \n");
 	scanf("%d", &fuelEfficiency);
 	printf("You entered... %d", fuelEfficiency);
 	printf("\n");
-	int output2 = doMath(gasPricePerGal, tripMiles, output1);
+	int output2 = doMath(gasPricePerGal, fuelEfficiency, output1);
 	printf("gas price per gal & trip miles: %d", output2);
 	printf("\n");
 
