@@ -2,9 +2,9 @@
 #include <math.h>
 
 
-int doMath(int distance, int consumption, int fuel, int costpergal, int totalfuelcost)
+float doMath(float distance, float consumption, float fuel, float costpergal, float totalfuelcost)
 {
-    int o = distance / consumption;
+    float o = distance / consumption;
     totalfuelcost = o * costpergal;
 
     return totalfuelcost;
@@ -12,21 +12,21 @@ int doMath(int distance, int consumption, int fuel, int costpergal, int totalfue
 
 int main ()
 {
-    int distance;
-    int consumption;
-    int fuel;
-    int costpergal;
-    int totalfuelcost;
+    float distance;
+    float consumption;
+    float fuel;
+    float costpergal;
+    float totalfuelcost;
 
     printf("Lets calculate some gas. \n\nFirst off, make sure you have some stuff, \n\n\ncost per gal, \ndistance & fuel efficiency(consumption per mile)\n");
 
     printf("\n\n Give me your cost Per Gal: ");
-    scanf("%d", &costpergal);
+    scanf("%f", &costpergal);
     printf("\n\n Give me your distance: ");
-    scanf("%d", &distance);
+    scanf("%f", &distance);
     printf("\n\n Give me your consumption rate: ");
-    scanf("%d", &consumption);
-    int output = doMath(distance, consumption, fuel, costpergal, totalfuelcost);
-
+    scanf("%f", &consumption);
+    float output = doMath(distance, consumption, fuel, costpergal, totalfuelcost);
+    printf("bro jeez :%f", output);
     return 0;
 }
